@@ -5,8 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
+
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -19,8 +18,21 @@ public class AmigoscodeDemoSpringbootMongoApplication {
 		SpringApplication.run(AmigoscodeDemoSpringbootMongoApplication.class, args);
 	}
 
-	// This code was just for refernce
-	/*
+	
+
+	/**
+	 *  
+	 * @param studentRepository
+	 * @param mongoTemplate
+	 * @return
+	 * 
+	 * 
+	 * This code was just for refernce
+	 * 
+	 *
+	 * import org.springframework.data.mongodb.core.query.Criteria;
+		import org.springframework.data.mongodb.core.query.Query; 
+	
 	private void getStudentsByMail(Student student, StudentRepository studentRepository, MongoTemplate mongoTemplate) 
 			throws IllegalAccessException {
 		Query query = new Query();
@@ -38,8 +50,9 @@ public class AmigoscodeDemoSpringbootMongoApplication {
 		} else {
 			System.out.println("Student alredy exists");
 		}
-	}*/
-
+	}
+	
+	*/	 
 	@Bean
 	CommandLineRunner runner(StudentRepository studentRepository, MongoTemplate mongoTemplate) {
 		return args -> {
